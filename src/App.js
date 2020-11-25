@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      end: new Date("2020/12/0 21:25"),
+      end: new Date("2020/12/1 00:00"),
       time: new Date()
     }
   }
@@ -21,6 +21,7 @@ class App extends Component {
 
   render() {
     let seconds = parseInt((this.state.end-this.state.time)/1000);
+    console.log(seconds)
     let text
     if (seconds < 0) {
       text = "Barber deg for faen!"
